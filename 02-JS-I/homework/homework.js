@@ -253,13 +253,15 @@ function esVocal(letra){
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
   var largo = letra.length;
+  var upper_letra = letra.toUpperCase();
   
-  //Si largo = 1 Y ((esta incluido entre 'a' y 'z') o (esta incluido entre 'A' y 'Z')) 
 
   if ( (largo == 1) &&
-       ( ( (letra >= 'a') && (letra <= 'z') ) || 
-         ( (letra >= 'A') && (letra <= 'Z') ) 
-       )  
+       ( (upper_letra = 'A') || 
+         (upper_letra = 'E') || 
+         (upper_letra = 'I') || 
+         (upper_letra = 'O') || 
+         (upper_letra = 'U') )   
      ){
 
       return 'Es vocal'; //no me dicen nada para devover cuando todo este bien, decidí poner esto
