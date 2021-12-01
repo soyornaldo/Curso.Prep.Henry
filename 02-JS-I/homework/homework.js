@@ -5,6 +5,7 @@ const nuevaString = 'hola';
 
 // Crea una variable numérica, puede ser cualquier número:
 const nuevoNum = 3;
+const nuevoNum = null;  //Comentario Agregado
 
 // Crea una variable booleana:
 const nuevoBool = true;
@@ -44,9 +45,13 @@ function resta(x, y) {
   // Tu código:
   var resultado = x - y;
   return resultado;
+  
 }
 
+
+
 function multiplica(x, y) {
+  
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
   var resultado = x * y;
