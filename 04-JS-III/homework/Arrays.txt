@@ -1,0 +1,29 @@
+Arrays.
+Cuando vamos a programar necesitamos trabajar con información para que el programa alcance su objetivo. 
+La información la vamos a almacenar en variables, es común usar una variable para cada información que 
+vamos a usar, pero a veces la información es mas facil usarla agrupada toda ella en una sola
+variable y no almacenarla en muchas variables. 
+
+Por ejemplo supongamos que vamos a trabajar con el nombre la las Provincias del País, acaso no es más
+cómodo usar una sola variable para almacenar todas las provincias en vez de tener algo como: 
+provincia1, provincia2, provincia3, etc. Este tipo de variable va a ser algo así 
+como un cajón donde vamos a poner todos los nombres de las Provincias y que vamos a poder 
+sacar de ese cajón el nombre de cualquier Provincia cuando lo necesitemos usando solo esa variable.
+ Este tipo de variable que me permite hacer esto es del tipo arreglo (array en inglés) y se
+ va a declarar de la siguiente forma:
+
+ var provincias = [];  //declaramos un arreglo en la variable provincias 
+
+ como en este caso estamos hablando de los nombres de las Provincias y eso es algo que ya sabemos de antemano
+ podriamos llenar nuestro arreglo con el nombre de las Provincias en el mismo momento que hacemos la 
+ declaración.
+
+ var provincias = ['Buenos Aires','Catamarca','Chaco','Chubut','Córdoba',...];
+                        0              1         2       3         4      ->   posición dentro del arreglo.
+
+ y después para acceder por ejemplo al nombre de la provincia 'Buenos Aires' lo haríamos:
+
+ provincias[0] // 'Buenos Aires'
+
+ Cambiando el número dentro de los corchetes podemos acceder a cada nombre de las Provincias 
+ y todo esto usando solo una sola variable, he aquí la utilidad de los arrglos(arrays).
