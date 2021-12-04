@@ -4,8 +4,7 @@
 const nuevaString = 'hola';
 
 // Crea una variable numérica, puede ser cualquier número:
-const nuevoNum = 3;
-const nuevoNum = null;  //Comentario Agregado
+const nuevoNum = 3; 
 
 // Crea una variable booleana:
 const nuevoBool = true;
@@ -256,19 +255,18 @@ function esVocal(letra){
   var upper_letra = letra.toUpperCase();
   
 
-  if ( (largo == 1) &&
-       ( (upper_letra = 'A') || 
-         (upper_letra = 'E') || 
-         (upper_letra = 'I') || 
-         (upper_letra = 'O') || 
-         (upper_letra = 'U') )   
+  if ( (largo === 1) &&
+       ( (upper_letra === 'A') || 
+         (upper_letra === 'E') || 
+         (upper_letra === 'I') || 
+         (upper_letra === 'O') || 
+         (upper_letra === 'U') )   
      ){
 
-      return 'Es vocal'; //no me dicen nada para devover cuando todo este bien, decidí poner esto
-  }
-
-  return 'Dato Incorrecto';
-    
+      console.log('Es vocal'); //no me dicen nada para devover cuando todo este bien, decidí poner esto
+  }else{
+    console.log('Dato Incorrecto');
+  }   
 }
 
 
