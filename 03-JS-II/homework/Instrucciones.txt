@@ -1,0 +1,77 @@
+`for`
+A veces necesitamos repetir un conjunto de instrucciones no como en el caso de las funciones que se repiten
+en diferentes momentos sino que se van a realizar por ejemplo 10 veces o 30 veces de forma consecutiva.
+Si además sabemos de antemano cuantas veces necesitamos repetir ese grupo de instrucciones, entonces
+mejor usar un lazo for.
+
+forma declaración:
+
+for (instruccion1 ; instruccion2 ; intruccion3){
+    //instrucciones a repetir en el lazo
+}
+
+instruccion1: se va a ejecutar solo una vez antes de ejecutar las instrucciones dentro del lazo.
+instruccion2: aqui vamos a definir la condición por la que nos vamos a mantener repitiendo el lazo for,
+              siempre que sea true volvera a ejecutarse las instrucciones dentro del lazo. 
+              Es importante saber que 
+              en algún momento esta condición debe ser false para poder salir del lazo o de lo contrario
+              nos quedaremos de forma indefinida repitiendo el lazo for.
+instruccion3: se va a ejecutar cada vez que terminen de ejecutarse la última instrucción dentro del lazo.
+
+La forma más común de usar el lazo for es 
+1-Declaramos en la instruccion1 la variable que usaremos para controlar las veces que ejecutaremos el lazo.
+2-Usaremos la instruccion2 para ejecutar generalmente una comparación para definir si seguimos en el lazo o 
+si salimos de el, aquí esperamos una respuesta de tipo (true, false). Si es true seguimos en el lazo y si
+es false, salimos del lazo.
+3-Modificaremos la variable de control declarada en la instruccion1.
+
+Es bueno aclarar que estas tres instrucciones no son de uso obligatorio, pero debemos garantizar
+terminar la ejecución del lazo for de otra forma (usando break), de lo contrario nos quedaremos 
+indefinidamente dentro de el lazo.
+
+
+`&&`, `||`, `!`
+Ya hemos visto que es necesario para el uso del if o del for hacer algun tipo de comparación que nos
+devuelva respuestas de tipo true o false para poder tomar decisiones.
+Preguntas como:
+
+juan es mayor que pedro
+juan es mas alto que pedro 
+juan es mas flaco que pedro
+
+nos van a devolver true o false. Pero que pasa si necesitamos combinar estas preguntas para ejecutar un if o
+como control de un for.
+
+por ej:
+Y si necesito preguntar algo como
+
+(juan es mayor que pedro) y (juan es mas alto que pedro)
+
+para realizar algo. Pues para eso tenemos 
+
+&& es el equivalente a (y)
+|| es el equivalente a (o)
+! es el equivalente a (lo contrario de)
+
+entonces el ejemplo anterior quedaria:
+var edadJuan = 50, edadPedro = 45;
+var alturaJuan = 180, alturaPedro = 190;
+
+if ( (edadJuan > edadPedro) && (alturaJuan > alturaPedro)){
+    console.log('Juan mas viejo y mas alto');
+}else{
+    console.log('No se si Juan es mas joven o mas pequeño que Pedro');
+}
+
+Aquí estamos simulando 
+(juan es mayor que pedro) y (juan es mas alto que pedro)
+lo que es falso porque Pedro es mayor que Juan.
+
+Asi es como podemos simular las diferentes situaciones que se presentan en la tarea que estamos programando,
+haciendo combinaciones comparativas usando el &&(y), el ||(o) y !(lo contrario de)
+
+
+
+
+
+
