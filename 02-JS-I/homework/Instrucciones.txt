@@ -1,0 +1,123 @@
+Variables
+Cuando vamos a programar necesitamos trabajar con información para que el programa alcance su objetivo. 
+Las Variables son nombres donde vamos a almacenar esa información que necesitamos para programar una tarea.
+
+Las declaramos: 
+
+var edad = 15;
+let edad1 = 10;
+const edad2 = 20;
+
+aqui hemos creado las Variables edad, edad1, edad2 y ya le pusimos un valor. 
+En el caso de edad y edad1 podemos modificar su valor más adelante, pero edad2 no se puede modificar.
+
+edad = 25; //ok
+edad1 = 6; //ok
+edad2 = 23; //error
+
+También pudimos haber creado edad y edad1 sin necesidad de darle valor:
+
+var edad;  //0k
+let edad1;  //ok
+En estos casos edad y edad1 estan creadas pero estan undefined porque nunca ha tenido un valor.
+
+
+pero en el caso de edad2 hay que crearla con su valor
+
+const edad2;  //error
+
+
+
+
+Strings
+Podemos almacenar textos en variables.
+
+var nombre = 'Jose';
+let nombre1 = "Andres";
+const nombre2 = `Arturo`;
+
+Si nos fijamos bien para especificar el valor de un texto podemos usar ' ', " ", ` `
+Lo que acabamos hacer es declarar variables del tipo String que es un objeto que nos 
+brinda Javascript y nos va a permitir hacer uso de funciones y propiedades que son declaradas en ese objeto.
+Por ejemplo:
+
+nombre.length; // da 4, que es la cantidad de caracteres de 'Jose' 
+
+que nos brinda el tamaño(o cantidad de caracteres) del texto almacenado en la variable nombre, en este caso 4
+
+Otra cosa interesante es que podemos acceder a caracteres individuales especificando el lugar del caracter en el texto:
+
+nombre[0];  // 'J'
+
+Javascript cuenta los caracteres en cadenas de texto a partir del 0.
+
+funciones
+Cuando programamos lo hacemos usando instrucciones que nos brinda el lenguaje. 
+Para hacer una tarea vamos a usar un conjunto de instrucciones. 
+Si por casualidad esa tarea es necesario relizarla de forma reiterada, tendríamos que repetir ese 
+conjunto de instrucciones tantas veces como necesitemos realizar la tarea.
+Aqui es donde viene a salvarnos las funciones.
+Una función es un conjunto de instrucciones que van a realizar una tarea específica, esa función va 
+a estar identificada con un nombre el cual podemos usar en cualquier momento de nuestro programa para
+que se ejecuten ese conjunto de instrucciones.
+Las funciones pueden retornar algún valor o no, en dependencia del objetivo de la tarea.
+
+La función se declara:
+
+function nombre_funcion(){
+    //Aquí van las instrucciones que conforman la función
+}
+
+
+Ejemplo:
+
+Tarea: revisar un texto y chequear que sea un solo caracter y que sea una letra del vocabulario,
+       retornar true si cumple la condición o false si no.  
+
+function chequeaTexto(unTexto){
+   if ( (unTexto.length === 1) &&
+        (((unTexto >= 'a') && (unTexto <= 'z')) ||
+         ((unTexto >= 'A') && (unTexto <= 'Z'))) ){
+     return true;
+   }else{
+     return false;
+   }
+}
+
+
+Declaraciones if
+Hacer un programa es simular tareas que realizamos en la vida diaria. Ese es el objetivo, auxiliarnos
+de una computadora para agilizar tareas de la vida real. Si nos preguntamos cuantas veces tenemos una
+disyuntiva, la respuesta es a cada paso de la vida. 
+Preguntarnos si pasa esto hago algo sino hago otra cosa, es de lo mas común que nos encontramos al realizar 
+cualquier tarea mínimamente compleja.
+
+En programación(Javascript) vamos a tener la instrucción: 
+
+if pasa esto {
+   hago algo
+}else{
+   hago otra cosa
+}
+
+Esta instrucción es la que permite que un programa pueda abarcar muchas situaciones donde debe decidir que hacer.
+
+
+
+
+Valores booleanos (`true`, `false`)
+Imaginemonos en nuetra vida diaria cuantas veces respondemos o actuamos basados en esta respuesta Si o No.
+En programación tenemos una equivalencia usando true para el Si y false para el No.
+Estos valores se usan mucho, como indicadores o como respuesta a situaciones especificas dentro de un programa.
+Javascript nos brinda el objeto Boolean para declarar variables de este tipo.
+
+estaCompleto, esCorrecto, faltaAun, mayorQueElAnterior
+
+son ejemplos de posibles nombres de variables de tipo Boolean y que solo por el nombre podemos imaginarnos 
+su uso.
+
+
+
+
+
+
