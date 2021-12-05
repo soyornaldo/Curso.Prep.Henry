@@ -1,0 +1,110 @@
+Objetos
+Una forma de agrupar la informacion acerca de algo específico es un objeto.
+Co un objeto por ejemplo, podemos agrupar la información de estudiantes para trabajarla en un programa. 
+Entonces declaramos un objeto llamado por ej: estudiante, que cargue en su interior toda la información
+relativa a un estudiante y además puede cargar también la programación que necesitamos hacerle a esa 
+información.
+Se crea:
+
+const estudiante = {};
+
+
+Propiedades
+Las propiedades de un objeto es la información que vamos a manejar dentro de el objeto. Ellas nos van a 
+brindar todo lo que necesaritamos saber acerca del objeto. Se especifican en forma de un para
+
+llave: valor, 
+
+seguida de una coma para pasar a la proxima propiedad.
+En el caso del objeto estudiante podriamos tener algo como
+
+const estudiante = {
+    nombre: 'Jorge',
+    apellido1: 'Hernandez',
+    apellido2: 'Lazo',
+    edad: 17,
+    peso: 165,
+    estatura: 180,
+    notas:[97,95,100,90,86],
+};
+
+Podemos acceder a ellas de dos formas:
+estudiante.nombre;  // 'Jorge'
+estudiante['nombre']; // 'Jorge'
+
+
+Métodos
+Los métodos de un objeto son las acciones de ese objeto. Son funciones declaradas dentro del objeto
+En el caso del objeto estudiante podría tener un método que nos calcule el promedio del estudiante a
+partir de las notas.
+
+const estudiante = {
+    nombre: 'Jorge',
+    apellido1: 'Hernandez',
+    apellido2: 'Lazo',
+    edad: 17,
+    peso: 165,
+    estatura: 180,
+    notas:[97,95,100,90,86],
+
+    promedio: function (){
+        var cantAsignaturas = this.notas.length;
+        var suma = 0;
+        for (let i = 0; i < cantAsignaturas ; i++){
+
+           suma = suma + this.notas[i];
+        } 
+        return suma / cantAsignaturas;
+    },
+};
+
+
+
+
+
+
+Bucle `for…in`
+Podemos usar un lazo for...in para acceder a las propiedades y métodos de un objeto.
+
+var propiedades = []; //declaramos un arreglo vacio
+
+for (const propiedad in estudiante) {
+  propiedades.push(propiedad); //vamos agregando al arreglo el nombre de cada propiedad y método
+}
+
+
+
+
+
+
+Notación de puntos vs notación de corchetes
+Podemos acceder a las propiedades y métodos de un objeto de dos formas:
+
+estudiante.nombre;
+estudiante['nombre'];
+
+ambas son validas, aunque la variante de los corchetes nos permite siguiendo el ejemplo anterior:
+
+for (let i = 0; i < propiedades.length ; i++){
+    if (propiedades[i] === 'promedio'){
+        console.log(estudiante[propiedades[i]]()); //metodo
+    }else {
+        console.log(estudiante[propiedades[i]]);  //propiedades
+    }
+}
+
+Este lazo nos devolvería:
+
+Jorge
+Hernandez
+Lazo
+17
+165
+180
+Array (5)[ 97,95,100,90,86 ]
+93.6
+
+Que son los valores de cada una de las propiedades mas el método.
+
+ 
+
