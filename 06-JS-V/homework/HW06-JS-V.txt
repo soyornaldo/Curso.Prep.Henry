@@ -1,0 +1,43 @@
+* `prototype`
+Una clase en JavaScript nos permite crear objetos con mas facilidad que si fuesemos a crearlos declarandole las 
+propiedades objeto a objeto. Esto nos ahorra mucho tiempo. 
+Las clases tienen una propiedad llamada prototype, que nos permite declarar métodos que van a ser usados por los
+objetos creados por esta clase y los demás que se deriven de ese objeto.
+
+
+
+
+
+_Constructors_ (de Clases)
+Otra forma de declarar una clase es usando el keyword class, ejemplo creamos una clase Persona con algunas propiedades
+y métodos (que al final son propiedades también en JavaScript):
+
+class Persona{
+
+    //Aqui en el constructor declaro las propiedades
+    constructor(nombre,apellido,yearNacimiento){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.yearNacimiento = yearNacimiento;
+    }
+
+
+
+    //Aqui los métodos
+
+    nombreCompleto(){
+        return this.nombre + ' ' + this.apellido;
+    }
+
+    edad(yearActual){
+        return yearActual - this.yearNacimiento;
+    }
+}
+
+
+const yo = new Persona('Ornaldo', 'Hernandez', 1965);
+
+aquí construimos el objeto 'yo' usando la clase Persona como plantilla y quie hace esto 
+es el método constructor declarado en la clase Persona que es la plantilla que vamos a usar para crear el 
+objeto 'yo', este método nos vrea e inicializa un objeto a partir de una clase. 
+Este método no hay que llamarlo, se ejecuta automáticamente al hacer uso de la palabra clave new. 
