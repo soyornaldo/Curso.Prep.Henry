@@ -1,0 +1,22 @@
+Funciones Callback
+En JavaScript podemos usar una función como parámetro de otra función. Esto se llama Callback.
+
+
+function func2(){
+    console.log('Dentro de la función Callback');
+}
+
+function func1(f){
+    console.log('Dentro la función que llama a la función Callback');
+    f();
+}
+
+Aquí la función Callback es func2() y func1() es la función que ejecuta el Callback, el resultado de
+ejecutar 
+
+func1(func2);
+
+seria:
+
+Dentro la función que llama a la función Callback
+Dentro de la función Callback
