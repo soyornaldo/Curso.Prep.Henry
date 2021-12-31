@@ -189,8 +189,8 @@ function diaDeLaSemana(numeroDeDia) {
              (numeroDeDia === 4) ||
              (numeroDeDia === 5) ||
              (numeroDeDia === 6) ){
-     return 'Es dia Laboral'   
-  };
+     return 'Es dia Laboral';   
+  }
 } 
 
 
@@ -284,29 +284,20 @@ function breakStatement(numero) {
   // Tu código:
 
   var array_salida = [];
-  var limite = 0;
-  var nuevo_valor;
+  var interrumpido = false;
 
-  for (let i = 0; i < numero.length  ; i++){
-
-    if (++limite <= 10){
-
-      nuevo_valor = numero[i] + 2;
+  for (let i = 1; i <= 10  ; i++){
+      numero = numero + 2;
       
-      if (nuevo_valor === limite){
-        return 'Se interrumpió la ejecución';
+      if (numero === i){
+        interrumpido = true;
+        break;
       }else{
-        array_salida.push(nuevo_valor); 
+        array_salida.push(numero); 
       }
-
-    }else{
-      //se acabaron las 10 posibilidades para aumentar en 2 el numero
-      break;
-    }
-
   }
 
-  return array_salida;
+  return (interrumpido && 'Se interrumpió la ejecución') || array_salida;
 }
 
 
@@ -321,17 +312,12 @@ function continueStatement(numero) {
   var array_salida = [];
   var limite = 0;
 
-  for (let i = 0; i < numero.length  ; i++){
-    
-    if (++limite <= 10){
-      if (limite === 5){
-        continue;
-      }else{
-        array_salida.push(numero[i] + 2); 
-      }  
+  for (let i = 1; i <= 10  ; i++){
+    if (i === 5){
+      continue; 
     }else{
-      //se acabaron las 10 posibilidades para aumentar en 2 el numero
-      break;
+      numero = numero + 2;
+      array_salida.push(numero);
     }
   }
 

@@ -1,7 +1,7 @@
 // En estas primeras 6 preguntas, reemplaza `null` por la respuesta
 
 // Crea una variable "string", puede contener lo que quieras:
-const nuevaString = 'hola';
+const nuevaString = 'hola' ;
 
 // Crea una variable numérica, puede ser cualquier número:
 const nuevoNum = 3; 
@@ -10,13 +10,13 @@ const nuevoNum = 3;
 const nuevoBool = true;
 
 // Resuelve el siguiente problema matemático:
-const nuevaResta = 10 - null === 5; // 10 === 5  false
+const nuevaResta = 10 - 5 === 5; 
 
 // Resuelve el siguiente problema matemático:
-const nuevaMultiplicacion = 10 * null === 40 ; //  0 === 40 false
+const nuevaMultiplicacion = 10 * 4 === 40 ; 
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === null; // 1 === null false
+const nuevoModulo = 21 % 5 === 1; 
 
 
 // En los próximos 22 problemas, deberás completar la función.
@@ -207,7 +207,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  var saludo = nombre + ' -> Hola ' + nombre + '!';
+  var saludo = 'Hola ' + nombre + '!';
   return saludo;
 }
 
@@ -251,9 +251,9 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
+  
   var largo = letra.length;
   var upper_letra = letra.toUpperCase();
-  
 
   if ( (largo === 1) &&
        ( (upper_letra === 'A') || 
@@ -263,9 +263,9 @@ function esVocal(letra){
          (upper_letra === 'U') )   
      ){
 
-      console.log('Es vocal'); //no me dicen nada para devover cuando todo este bien, decidí poner esto
+      return 'Es vocal'; 
   }else{
-    console.log('Dato Incorrecto');
+    return 'Dato Incorrecto';
   }   
 }
 

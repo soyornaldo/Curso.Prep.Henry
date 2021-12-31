@@ -7,7 +7,7 @@ function mayuscula(nombre) {
 
   return nombre[0].toUpperCase() + nombre.substring(1,nombre.length);
 }
-
+  
 function invocarCallback(cb) {
   // Invoca al callback `cb`
   //Tu código:
@@ -51,9 +51,13 @@ function map(array, cb) {
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
 
-  return array.map(function(elemento){
-    return elemento;
+  var nuevoArr = [];
+
+  array.forEach(function(elemento){
+    nuevoArr.push(cb(elemento));
   });
+
+  return nuevoArr;
 }
 
 function filter(array) {
