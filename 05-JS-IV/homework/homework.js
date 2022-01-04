@@ -14,7 +14,7 @@ function crearGato(nombre, edad) {
     edad: edad,
     meow: function(){
       return 'Meow';
-    }   
+    }     
   }
 }
 
@@ -86,16 +86,7 @@ function tienePropiedad(objeto, propiedad) {
   // De lo contrario, devuelve "false"
   // Tu código:
 
-  var respuesta = false;
-
-  for (let campo in objeto){
-    if (campo === propiedad){
-      respuesta = true;
-      break;    
-    }
-  }
-
-  return respuesta;
+  return objeto[propiedad] != null;
 }
 
 function verificarPassword(usuario, password) {
@@ -122,8 +113,7 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Devuelve el objeto "usuario"
   // // Tu código:
 
-  usuario.amigos.push(nuevoAmigo);
-  return usuario;
+  return usuario.amigos.push(nuevoAmigo);
 }
 
 function pasarUsuarioAPremium(usuarios) {
@@ -133,9 +123,9 @@ function pasarUsuarioAPremium(usuarios) {
   // Devuelve el array de usuarios
   // Tu código:
 
-  for (let i = 0; i < usuarios.length ;i++){
-     usuarios[i].esPremium = true;
-  }
+  usuarios.forEach(function(usuario) {
+    usuario.esPremium = true;
+  });
 
   return usuarios;
 }
@@ -150,9 +140,9 @@ function sumarLikesDeUsuario(usuario) {
 
   var suma = 0;
 
-  for (let i = 0; i < usuario.posts.length ; i++){
-      suma = suma + usuario.posts[i].likes;
-  }
+  usuario.posts.forEach(function(post){
+     suma = suma + post.likes;
+  });
 
   return suma;
 }

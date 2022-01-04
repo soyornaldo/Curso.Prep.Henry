@@ -10,7 +10,7 @@ archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
   display: block;
   text-align: center;
 }
-
+ 
 
 /* Ejercicio 2: Posicionar el header */
 
@@ -56,18 +56,23 @@ archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
 /* Ejercicio 6. */
 
 #ejercicioSiete{
-    display: grid;
+    display: flex;
     grid-gap: 5px;
 
-    background: #858585;
+    /* background: #858585; */
 
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
 
-    justify-items: center;
+    /* justify-items: center; */
     align-items: center;
+
+    justify-content: space-between;
+    /* align-content: space-evenly; */
 }
 
-#elementoUno{
+
+#elementoUno {
+    width: 100px;
     background: chartreuse;
+    border-radius: 50px;
+    border: 5px solid #666;
 }
